@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DogeOS Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Optional favicon for docs subdomain -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #f5f5f5;
+      --muted: #a0a0a0;
+      --accent: #ffffff;
+      --font-main: "VT323", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: var(--text);
+      font-family: var(--font-main);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 240px;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 1.5rem 1rem;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .brand-main {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    .nav {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .nav-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .nav-link {
+      font-size: 1.1rem;
+      padding: 0.25rem 0.3rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      color: var(--muted);
+      text-decoration: none;
+      display: block;
+    }
+
+    .nav-link:hover,
+    .nav-link--active {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--accent);
+    }
+
+    .content {
+      flex: 1;
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.5rem 0 0.5rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin: 1rem 0 0.4rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    code {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.1rem 0.3rem;
+      border-radius: 0.2rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .tagline {
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+    }
+
+    .back-link {
+      margin-top: 1rem;
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">DogeOS</div>
+      <div class="brand-main">Docs Console</div>
+
+      <div class="nav">
+        <div class="nav-title">Sections</div>
+        <a href="#getting-started" class="nav-link nav-link--active">Getting Started</a>
+        <a href="#terminal" class="nav-link">Terminal Agent</a>
+        <a href="#scan-agent" class="nav-link">Scan Agent</a>
+        <a href="#commands" class="nav-link">Commands</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <h1>DogeOS Agent Documentation</h1>
+      <p class="tagline">On-chain terminal doge. Much docs. Much clarity.</p>
+      <a class="back-link" href="https://dogeagent.org" target="_blank">← Back to DogeOS Agent Console</a>
+
+      <h2 id="getting-started">Getting Started</h2>
+      <p>
+        DogeOS Agent is a terminal-style interface to AI agents for trading, research and on-chain alpha.
+        The main console has three modules: <strong>Terminal</strong>, <strong>Scan Agent</strong> and <strong>Docs</strong>.
+      </p>
+      <h3>Quickstart</h3>
+      <ul>
+        <li>Open <code>dogeagent.org</code>.</li>
+        <li>Select <strong>Terminal</strong> in the left navigation and say <code>hello</code>.</li>
+        <li>Paste a token CA into <strong>Scan Agent</strong> to get intel &amp; risk.</li>
+      </ul>
+
+      <h2 id="terminal">Terminal Agent</h2>
+      <p>
+        The Terminal Agent is a chat-style AI with the personality <strong>Doge Sentinel</strong>
+        <span class="pill">CLI</span>. Use it for narrative, questions, strategy ideas and general degen
+        brainstorming. This is <strong>not</strong> financial advice.
+      </p>
+      <h3>Example prompts</h3>
+      <ul>
+        <li><code>give me a 2-sentence thesis on ANONCOIN in meme style</code></li>
+        <li><code>summarize the latest narratives on SOL vs ETH in 5 bullets</code></li>
+        <li><code>help me write a meme tweet for this chart</code></li>
+      </ul>
+
+      <h2 id="scan-agent">Scan Agent</h2>
+      <p>
+        Scan Agent reads a token contract address and tries to assemble high-level intel:
+        basic metrics, holder hints, and social links when available.
+        It responds with a short summary, risk flavor text, and important links when detected.
+        <span class="pill">AI</span>
+      </p>
+      <h3>How to use</h3>
+      <ul>
+        <li>Click <strong>Scan Agent</strong> in the left navigation of the main console.</li>
+        <li>Paste a token contract address (EVM or SOL).</li>
+        <li>Hit <strong>scan</strong> and wait for the analysis.</li>
+      </ul>
+
+      <h3>What you might see</h3>
+      <ul>
+        <li>Summary of the token / meme.</li>
+        <li>Rough risk label (e.g. “HIGH RISK / DEGEN ONLY”).</li>
+        <li>Links: Dexscreener, website, X, Telegram – when available.</li>
+      </ul>
+
+      <h2 id="commands">Docs Terminal Commands</h2>
+      <p>
+        Inside the main console, the <em>Docs terminal</em> is a micro-helper with a few text commands.
+        It exists mainly for quick orientation.
+      </p>
+      <ul>
+        <li><code>help</code> – list available commands.</li>
+        <li><code>help scan</code> – how to use Scan Agent.</li>
+        <li><code>help terminal</code> – how to use Terminal Agent.</li>
+        <li><code>clear</code> – clear the docs terminal screen.</li>
+      </ul>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>Is this financial advice?</h3>
+      <p>No. DogeOS is an AI assistant for vibes and research. Always DYOR. Always NFA.</p>
+
+      <h3>Where does the data come from?</h3>
+      <p>
+        Scan Agent is designed to aggregate on-chain + off-chain hints into human-readable summaries.
+        Exact sources and behavior may evolve over time.
+      </p>
+
+      <h3>Something looks wrong. What do I do?</h3>
+      <p>
+        Markets move fast, contracts can be weird and AI can be wrong. Treat everything as
+        a starting point, not truth. Cross-check dashboards and explorers before acting.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    // Simple active state sync for sidebar links
+    const links = document.querySelectorAll(".nav-link");
+    function setActive(hash) {
+      links.forEach(link => {
+        link.classList.toggle(
+          "nav-link--active",
+          link.getAttribute("href") === hash
+        );
+      });
+    }
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        setActive(link.getAttribute("href"));
+      });
+    });
+
+    // On load, sync to current hash
+    window.addEventListener("load", () => setActive(location.hash || "#getting-started"));
+  </script>
+</body>
+</html>
